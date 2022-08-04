@@ -1,0 +1,5 @@
+sudo apt install ffuf
+sudo apt install dirsearch
+sudo apt install amass
+sudo apt install dirb
+sudo apt install dirbuster
