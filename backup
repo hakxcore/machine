@@ -4,6 +4,8 @@ wget https://go.dev/dl/go1.19.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.19.linux-amd64.tar.gz
 sudo apt install vim
 vim $HOME/.profile
+sudo apt install curl fish -y
+fish
 echo -e "\t\t\t\tGo Installation Check"
 go version
 echo -e "\t\t\t\tJava Installation Check"
@@ -48,5 +50,3 @@ sudo apt install metasploit
 echo -e "\t\t\t\t Installing ifconfig"
 sudo apt install dns-utils
 
-
-echo -e "\t\t\t\t Installing "
