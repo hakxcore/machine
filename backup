@@ -1,5 +1,52 @@
+sudo apt update && sudo apt upgrade -y
+sudo apt install gcc && default-jdk default-jre python3 nodejs npm -y
+wget https://go.dev/dl/go1.19.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.19.linux-amd64.tar.gz
+sudo apt install vim
+vim $HOME/.profile
+echo -e "\t\t\t\tGo Installation Check"
+go version
+echo -e "\t\t\t\tJava Installation Check"
+javac --version
+echo -e "\t\t\t\tpython Installation Check"
+python3 --version
+echo -e "\t\t\t\tcpp Installation Check"
+gcc --version 
+echo -e "\t\t\t\tNode Installation Check"
+node --version 
+echo -e "\t\t\t\tnpm Installation Check"
+npm -v
+clear
+echo -e "\t\t\t\t Installing ffuf"
 sudo apt install ffuf
+
+echo -e "\t\t\t\t Installing dirsearch"
 sudo apt install dirsearch
+
+echo -e "\t\t\t\t Installing amass"
 sudo apt install amass
+
+echo -e "\t\t\t\t Installing dirb"
 sudo apt install dirb
+
+echo -e "\t\t\t\t Installing dirbuster"
 sudo apt install dirbuster
+
+
+echo -e "\t\t\t\t Installing sqlmap"
+sudo apt install sqlmap
+
+
+echo -e "\t\t\t\t Installing nmap"
+sudo apt install nmap
+
+
+echo -e "\t\t\t\t Installing metasploit"
+sudo apt install metasploit
+
+
+echo -e "\t\t\t\t Installing ifconfig"
+sudo apt install dns-utils
+
+
+echo -e "\t\t\t\t Installing "
