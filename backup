@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install gcc && default-jdk default-jre python3 nodejs npm -y
 wget https://go.dev/dl/go1.19.linux-amd64.tar.gz
