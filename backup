@@ -24,7 +24,7 @@ sudo apt update && sudo apt upgrade -y
 echo -e $GREEN"\t\t\t\tUpdate Finished"$RESETBG
 
 echo -e $ORANGE"\t\t\t\tIling (c++, Python3, java, Node, npm)"$RESETBG
-sudo apt install gcc && default-jdk default-jre python3 python3-pip nodejs curl fish tmate -y
+sudo apt install gcc git default-jdk default-jre python3 python3-pip nodejs curl fish tmate -y
 sudo apt install python3-pip -y
 echo -e $GREEN"\t\t\t\tInstallation Finished"$RESETBG
 
@@ -76,5 +76,14 @@ sudo apt install metasploit
 
 echo -e $ORANGE"\t\t\t\t Installing ifconfig"$RESETBG
 sudo apt install dns-utils
+
+echo -e $ORANGE"\t\t\t\t Installing Docker"$RESETBG
+sudo apt install docker.io
+
+git clone https://github.com/six2dez/reconftw
+cd reconftw/
+./install.sh
+./reconftw.sh -d target.com -r
+
 
 fish
