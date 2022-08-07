@@ -1,53 +1,80 @@
 #!/bin/bash
+
+#colors
+RED="$(printf '\033[31m')" GREEN="$(printf '\033[32m')" ORANGE="$(printf '\033[33m')" BLUE="$(printf '\033[34m')"
+MAGENTA="$(printf '\033[35m')" CYAN="$(printf '\033[36m')" WHITE="$(printf '\033[37m')" BLACK="$(printf '\033[30m')" 
+REDBG="$(printf '\033[41m')" GREENBG="$(printf '\033[42m')" ORANGEBG="$(printf '\033[43m')" BLUEBG="$(printf '\033[44m')", 
+MAGENTABG="$(printf '\033[45m')" CYANBG="$(printf '\033[46m')" WHITEBG="$(printf '\033[47m')" BLACKBG="$(printf '\033[40m')"
+RESETBG="$(printf '\e[0m')" BLINK="$(printf '\033[5;31m')"
+
+echo "
+
+                                              ██╗  ██╗ █████╗ ██╗  ██╗██╗  ██╗ ██████╗ ██████╗ ██████╗ ███████╗
+                                              ██║  ██║██╔══██╗██║ ██╔╝╚██╗██╔╝██╔════╝██╔═══██╗██╔══██╗██╔════╝
+                                              ███████║███████║█████╔╝  ╚███╔╝ ██║     ██║   ██║██████╔╝█████╗  
+                                              ██╔══██║██╔══██║██╔═██╗  ██╔██╗ ██║     ██║   ██║██╔══██╗██╔══╝  
+                                              ██║  ██║██║  ██║██║  ██╗██╔╝ ██╗╚██████╗╚██████╔╝██║  ██║███████╗
+                                              ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
+                                                                               v1.0.0 | Bringing Machine Back...
+                                                                 
+"
+
+echo -e $ORANGE"\t\t\t\tUpdating instance"$RESETBG 
 sudo apt update && sudo apt upgrade -y
-sudo apt install gcc && default-jdk default-jre python3 python3-pip nodejs npm -y
+echo -e $GREEN"\t\t\t\tUpdate Finished"$RESETBG
+
+echo -e $ORANGE"\t\t\t\tIling (c++, Python3, java, Node, npm)"$RESETBG
+sudo apt install gcc && default-jdk default-jre python3 python3-pip nodejs curl fish tmate -y
+sudo apt install python3-pip -y
+echo -e $GREEN"\t\t\t\tInstallation Finished"$RESETBG
+
+echo -e $ORANGE"\t\t\t\tInstalling (GO)"$RESETBG
 wget https://go.dev/dl/go1.19.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.19.linux-amd64.tar.gz
 sudo apt install vim
-vim $HOME/.profile
-sudo apt install curl fish -y
-fish
-echo -e "\t\t\t\tGo Installation Check"
+sudo cat "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile
+echo -e $ORANGE"\t\t\t\tGo Installation Check"$RESETBG
 go version
-echo -e "\t\t\t\tJava Installation Check"
+echo -e $ORANGE"\t\t\t\tJava Installation Check"$RESETBG
 javac --version
-echo -e "\t\t\t\tpython Installation Check"
+echo -e $ORANGE"\t\t\t\tpython Installation Check"$RESETBG
 python3 --version
-echo -e "\t\t\t\tcpp Installation Check"
+echo -e $ORANGE"\t\t\t\tcpp Installation Check"$RESETBG
 gcc --version 
-echo -e "\t\t\t\tNode Installation Check"
+echo -e $ORANGE"\t\t\t\tNode Installation Check"$RESETBG
 node --version 
-echo -e "\t\t\t\tnpm Installation Check"
+echo -e $ORANGE"\t\t\t\tnpm Installation Check"$RESETBG
 npm -v
 clear
-echo -e "\t\t\t\t Installing ffuf"
+echo -e $ORANGE"\t\t\t\t Installing ffuf"$RESETBG
 sudo apt install ffuf
 
-echo -e "\t\t\t\t Installing dirsearch"
+echo -e $ORANGE"\t\t\t\t Installing dirsearch"$RESETBG
 sudo apt install dirsearch
 
-echo -e "\t\t\t\t Installing amass"
+echo -e $ORANGE"\t\t\t\t Installing amass"$RESETBG
 sudo apt install amass
 
-echo -e "\t\t\t\t Installing dirb"
+echo -e $ORANGE"\t\t\t\t Installing dirb"$RESETBG
 sudo apt install dirb
 
-echo -e "\t\t\t\t Installing dirbuster"
+echo -e $ORANGE"\t\t\t\t Installing dirbuster"$RESETBG
 sudo apt install dirbuster
 
 
-echo -e "\t\t\t\t Installing sqlmap"
+echo -e $ORANGE"\t\t\t\t Installing sqlmap"$RESETBG
 sudo apt install sqlmap
 
 
-echo -e "\t\t\t\t Installing nmap"
+echo -e $ORANGE"\t\t\t\t Installing nmap"$RESETBG
 sudo apt install nmap
 
 
-echo -e "\t\t\t\t Installing metasploit"
+echo -e $ORANGE"\t\t\t\t Installing metasploit"$RESETBG
 sudo apt install metasploit
 
 
-echo -e "\t\t\t\t Installing ifconfig"
+echo -e $ORANGE"\t\t\t\t Installing ifconfig"$RESETBG
 sudo apt install dns-utils
 
+fish
