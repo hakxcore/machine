@@ -16,7 +16,7 @@ echo -e "
                                                                  ██║  ██║██║  ██║██║  ██╗██╔╝ ██╗╚██████╗╚██████╔╝██║  ██║███████╗
                                                                  ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
 \t\t\t\t\t\t\t\t\t\t"$GREEN"v1.0.0$RESETBG | "$BLINK"Bringing Machine Back..."$RESETBG
-echo -e "Gonna take time so Go grab Coffie..Buddy!"
+echo -e $GREEN"Gonna take time so Go grab Coffie..Buddy!"$RESETBG
 sleep 5
 
 echo -e $ORANGE"\t\t\t\tUpdating instance"$RESETBG
@@ -101,7 +101,7 @@ curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/t
 
 echo -e $ORANGE"\n\t\t\t\t Installing Docker"$RESETBG
 sleep 2
-sudo apt install docker.io
+sudo apt install docker.io -y
 
 
 echo -e $ORANGE"\n\t\t\t\t Installing reconFTW"$RESETBG
