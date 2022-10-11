@@ -23,9 +23,11 @@ echo -e $ORANGE"\t\t\t\tUpdating instance"$RESETBG
 sudo apt update && sudo apt upgrade -y
 echo -e $GREEN"\t\t\t\tUpdate Finished"$RESETBG
 
-echo -e $ORANGE"\t\t\t\tIling (c++, Python3, java, Node, npm)"$RESETBG
-sudo apt install gcc git default-jdk default-jre python3 python3-pip nodejs curl fish tmate -y
+echo -e $ORANGE"\t\t\t\tIling (c++, Python3, java, Node, npm, ruby, rust)"$RESETBG
+sudo apt install gcc git default-jdk default-jre python3 python3-pip nodejs curl fish tmate golang -y
 sudo apt install python3-pip -y
+sudo apt install ruby-full -y 
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 echo -e $GREEN"\t\t\t\tInstallation Finished"$RESETBG
 
 echo -e $ORANGE"\t\t\t\tInstalling (GO)"$RESETBG
@@ -45,6 +47,11 @@ echo -e $ORANGE"\t\t\t\tNode Installation Check"$RESETBG
 node --version 
 echo -e $ORANGE"\t\t\t\tnpm Installation Check"$RESETBG
 npm -v
+echo -e $ORANGE"\t\t\t\truby Installation Check"$RESETBG
+ruby --version
+echo -e $ORANGE"\t\t\t\trust Installation Check"$RESETBG
+rustc --version
+sleep 5
 clear
 echo -e $ORANGE"\t\t\t\t Installing ffuf"$RESETBG
 sudo apt install ffuf
@@ -80,10 +87,13 @@ sudo apt install dns-utils
 echo -e $ORANGE"\t\t\t\t Installing Docker"$RESETBG
 sudo apt install docker.io
 
+echo -e  $ORANGE"\t\t\t\t Installing Reconftw"$RESETBG
 git clone https://github.com/six2dez/reconftw
 cd reconftw/
 ./install.sh
 ./reconftw.sh -d target.com -r
 
+echo -e $ORANGE"\t\t\t\t Installing runiq (it finds unique lines from a file)"$RESETBG
+cargo install runiq
 
 fish
