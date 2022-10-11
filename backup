@@ -7,45 +7,51 @@ REDBG="$(printf '\033[41m')" GREENBG="$(printf '\033[42m')" ORANGEBG="$(printf '
 MAGENTABG="$(printf '\033[45m')" CYANBG="$(printf '\033[46m')" WHITEBG="$(printf '\033[47m')" BLACKBG="$(printf '\033[40m')"
 RESETBG="$(printf '\e[0m')" BLINK="$(printf '\033[5;31m')"
 
-echo "
+echo -e "
 
-                                              ██╗  ██╗ █████╗ ██╗  ██╗██╗  ██╗ ██████╗ ██████╗ ██████╗ ███████╗
-                                              ██║  ██║██╔══██╗██║ ██╔╝╚██╗██╔╝██╔════╝██╔═══██╗██╔══██╗██╔════╝
-                                              ███████║███████║█████╔╝  ╚███╔╝ ██║     ██║   ██║██████╔╝█████╗  
-                                              ██╔══██║██╔══██║██╔═██╗  ██╔██╗ ██║     ██║   ██║██╔══██╗██╔══╝  
-                                              ██║  ██║██║  ██║██║  ██╗██╔╝ ██╗╚██████╗╚██████╔╝██║  ██║███████╗
-                                              ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
-                                                                               v1.0.0 | Bringing Machine Back...
-                                                                 
-"
+                                                                 ██╗  ██╗ █████╗ ██╗  ██╗██╗  ██╗ ██████╗ ██████╗ ██████╗ ███████╗
+                                                                 ██║  ██║██╔══██╗██║ ██╔╝╚██╗██╔╝██╔════╝██╔═══██╗██╔══██╗██╔════╝
+                                                                 ███████║███████║█████╔╝  ╚███╔╝ ██║     ██║   ██║██████╔╝█████╗  
+                                                                 ██╔══██║██╔══██║██╔═██╗  ██╔██╗ ██║     ██║   ██║██╔══██╗██╔══╝  
+                                                                 ██║  ██║██║  ██║██║  ██╗██╔╝ ██╗╚██████╗╚██████╔╝██║  ██║███████╗
+                                                                 ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
+\t\t\t\t\t\t\t\t\t\t"$GREEN"v1.0.0$RESETBG | "$BLINK"Bringing Machine Back..."$RESETBG
+echo -e $GREEN"Gonna take time so Go grab Coffie..Buddy!"$RESETBG
+sleep 5
 
-echo -e $ORANGE"\t\t\t\tUpdating instance"$RESETBG 
+echo -e $ORANGE"\t\t\t\tUpdating instance"$RESETBG
+sleep 2
 sudo apt update && sudo apt upgrade -y
 echo -e $GREEN"\t\t\t\tUpdate Finished"$RESETBG
 
 echo -e $ORANGE"\t\t\t\tIling (c++, Python3, java, Node, npm, ruby, rust)"$RESETBG
-sudo apt install gcc git default-jdk default-jre python3 python3-pip nodejs curl fish tmate golang -y
-sudo apt install python3-pip -y
-sudo apt install ruby-full -y 
+sudo apt install gcc git default-jdk default-jre python3 python3-pip nodejs curl fish tmate golang ruby-full -y
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 echo -e $GREEN"\t\t\t\tInstallation Finished"$RESETBG
 
-echo -e $ORANGE"\t\t\t\tInstalling (GO)"$RESETBG
+echo -e $ORANGE"\n\t\t\t\tInstalling (GO)"$RESETBG
+sleep 2
 wget https://go.dev/dl/go1.19.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.19.linux-amd64.tar.gz
 sudo apt install vim
 sudo cat "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile
-echo -e $ORANGE"\t\t\t\tGo Installation Check"$RESETBG
+echo -e $ORANGE"\n\t\t\t\tGo Installation Check"$RESETBG
+sleep 2
 go version
-echo -e $ORANGE"\t\t\t\tJava Installation Check"$RESETBG
+echo -e $ORANGE"\n\t\t\t\tJava Installation Check"$RESETBG
+sleep 2
 javac --version
-echo -e $ORANGE"\t\t\t\tpython Installation Check"$RESETBG
+echo -e $ORANGE"\n\t\t\t\tpython Installation Check"$RESETBG
+sleep 2
 python3 --version
-echo -e $ORANGE"\t\t\t\tcpp Installation Check"$RESETBG
+echo -e $ORANGE"\n\t\t\t\tcpp Installation Check"$RESETBG
+sleep 2
 gcc --version 
-echo -e $ORANGE"\t\t\t\tNode Installation Check"$RESETBG
+echo -e $ORANGE"\n\t\t\t\tNode Installation Check"$RESETBG
+sleep 2
 node --version 
-echo -e $ORANGE"\t\t\t\tnpm Installation Check"$RESETBG
+echo -e $ORANGE"\n\t\t\t\tnpm Installation Check"$RESETBG
+sleep 2
 npm -v
 echo -e $ORANGE"\t\t\t\truby Installation Check"$RESETBG
 ruby --version
@@ -53,47 +59,87 @@ echo -e $ORANGE"\t\t\t\trust Installation Check"$RESETBG
 rustc --version
 sleep 5
 clear
-echo -e $ORANGE"\t\t\t\t Installing ffuf"$RESETBG
-sudo apt install ffuf
+echo -e $ORANGE"\n\t\t\t\t Installing ffuf"$RESETBG
+sleep 2
+sudo apt install ffuf -y
 
-echo -e $ORANGE"\t\t\t\t Installing dirsearch"$RESETBG
-sudo apt install dirsearch
+echo -e $ORANGE"\n\t\t\t\t Installing dirsearch"$RESETBG
+sleep 2
+sudo apt install dirsearch -y 
 
-echo -e $ORANGE"\t\t\t\t Installing amass"$RESETBG
-sudo apt install amass
+echo -e $ORANGE"\n\t\t\t\t Installing amass"$RESETBG
+sleep 2
+sudo apt install amass -y
 
-echo -e $ORANGE"\t\t\t\t Installing dirb"$RESETBG
-sudo apt install dirb
+echo -e $ORANGE"\n\t\t\t\t Installing dirb"$RESETBG
+sleep 2
+sudo apt install dirb -y
 
-echo -e $ORANGE"\t\t\t\t Installing dirbuster"$RESETBG
-sudo apt install dirbuster
-
-
-echo -e $ORANGE"\t\t\t\t Installing sqlmap"$RESETBG
-sudo apt install sqlmap
-
-
-echo -e $ORANGE"\t\t\t\t Installing nmap"$RESETBG
-sudo apt install nmap
+echo -e $ORANGE"\n\t\t\t\t Installing dirbuster"$RESETBG
+sleep 2
+sudo apt install dirbuster -y 
 
 
-echo -e $ORANGE"\t\t\t\t Installing metasploit"$RESETBG
-sudo apt install metasploit
+echo -e $ORANGE"\n\t\t\t\t Installing sqlmap"$RESETBG
+sleep 2
+sudo apt install sqlmap -y
 
 
-echo -e $ORANGE"\t\t\t\t Installing ifconfig"$RESETBG
-sudo apt install dns-utils
+echo -e $ORANGE"\n\t\t\t\t Installing nmap"$RESETBG
+sleep 2
+sudo apt install nmap -y
 
-echo -e $ORANGE"\t\t\t\t Installing Docker"$RESETBG
-sudo apt install docker.io
+
+echo -e $ORANGE"\n\t\t\t\t Installing metasploit"$RESETBG
+sleep 2
+sudo apt-get install -y curl gpgv2 autoconf bison build-essential
+git-corelibapr1 postgresql libaprutil1 libcurl4openssl-dev libgmp3-dev libpcap-dev
+openssl libpq-dev libreadline6-dev libsqlite3-dev libssl-dev locate libsvn1 libtool
+libxml2 libxml2-dev libxslt-dev wget libyaml-dev ncurses-dev  postgresql-contrib xsel
+zlib1g zlib1g-dev
+
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
+  chmod 755 msfinstall && \
+  ./msfinstall
+#Once installed, you can launch msfconsole as /opt/metasploit-framework/bin/msfconsole
+
+echo -e $ORANGE"\n\t\t\t\t Installing Docker"$RESETBG
+sleep 2
+sudo apt install docker.io -y
 
 echo -e  $ORANGE"\t\t\t\t Installing Reconftw"$RESETBG
+echo -e $ORANGE"\n\t\t\t\t Installing reconFTW"$RESETBG
+sleep 2
 git clone https://github.com/six2dez/reconftw
 cd reconftw/
 ./install.sh
-./reconftw.sh -d target.com -r
-
+echo " use './reconftw.sh -d target.com -r'"
+echo -e $GREEN"\t\t\t\treconFTW Installation Finished"$RESETBG
 echo -e $ORANGE"\t\t\t\t Installing runiq (it finds unique lines from a file)"$RESETBG
 cargo install runiq
+echo -e $ORANGE"\n\t\t\t\t Installing Arjun"$RESETBG
+pip3 install arjun
+echo -e $GREEN"\t\t\t\treconFTW Installation Finished"$RESETBG
 
+echo -e $ORANGE"\n\t\t\t\t Installing Dalfox"$RESETBG
+sudo snap install dalfox
+echo -e $GREEN"\t\t\t\tDalfox Installation Finished"$RESETBG
+
+echo -e $ORANGE"\n\t\t\t\tMachine is ready for You"$RESETBG
+sleep 2
+echo -e $ORANGE"\n\t\t\t\t"Lets get into an interactive shell"$RESETBG
+sleep 2
 fish
+
+
+#Some tips for you
+#Thinking strategically vs toxic productivity
+#Emotional control is a superpower
+#Pain of discipline vs Pain of regret
+#Don’t compare yourself to others
+#Always communicate more
+#Don’t rest on your laurels
+#Titles & reputations
+#Time management
+#Finding happiness
+#Finding mentors
