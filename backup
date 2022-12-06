@@ -124,13 +124,9 @@ echo -e $ORANGE"\n\t\t\t\t Installing Arjun"$RESETBG
 pip3 install arjun
 echo -e $GREEN"\t\t\t\treconFTW Installation Finished"$RESETBG
 
-echo -e $ORANGE"\n\t\t\t\t Installing Dalfox"$RESETBG
-sudo snap install dalfox
-echo -e $GREEN"\t\t\t\tDalfox Installation Finished"$RESETBG
-
 echo -e $ORANGE"\n\t\t\t\tMachine is ready for You"$RESETBG
 sleep 2
-echo -e $ORANGE"\n\t\t\t\t"Lets get into an interactive shell"$RESETBG
+echo -e "$ORANGE"\n\t\t\t\t"Lets get into an interactive shell"$RESETBG
 sleep 2
 fish
 
