@@ -31,10 +31,9 @@ echo -e $GREEN"\t\t\t\tInstallation Finished"$RESETBG
 
 echo -e $ORANGE"\n\t\t\t\tInstalling (GO)"$RESETBG
 sleep 2
-wget https://go.dev/dl/go1.19.linux-amd64.tar.gz
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.19.linux-amd64.tar.gz
+sudo apt install golang
+echo -e $ORANGE"\n\t\t\t\tInstalling Vim"$RESETBG
 sudo apt install vim
-sudo cat "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile
 echo -e $ORANGE"\n\t\t\t\tGo Installation Check"$RESETBG
 sleep 2
 go version
