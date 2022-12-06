@@ -64,7 +64,11 @@ sudo apt install ffuf -y
 
 echo -e $ORANGE"\n\t\t\t\t Installing dirsearch"$RESETBG
 sleep 2
-sudo apt install dirsearch -y 
+sudo apt install dirsearch -y
+
+echo -e $ORANGE"\n\t\t\t\t Installing gobuster"$RESETBG
+sleep 2
+sudo apt install gobuster -y 
 
 echo -e $ORANGE"\n\t\t\t\t Installing amass"$RESETBG
 sleep 2
