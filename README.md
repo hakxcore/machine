@@ -7,3 +7,12 @@ My hacking machine backup
 
 
 watch this video to use this script
+
+
+
+
+
+
+<p align="center">
+  <img src="https://profile-counter.glitch.me/machine/count.svg" />
+</p>
