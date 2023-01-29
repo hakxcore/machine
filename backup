@@ -92,6 +92,9 @@ echo -e $ORANGE"\n\t\t\t\t Installing nmap"$RESETBG
 sleep 2
 sudo apt install nmap -y
 
+echo -r $ORANGE"\n\t\t\t\t Installing all projectDiscovery Tools"$RESETBG
+sleep 2
+go install -v github.com/projectdiscovery/pdtm/cmd/pdtm@latest
 
 echo -e $ORANGE"\n\t\t\t\t Installing metasploit"$RESETBG
 sleep 2
