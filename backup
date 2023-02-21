@@ -112,6 +112,10 @@ curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/t
 echo -e $ORANGE"\n\t\t\t\t Installing Docker"$RESETBG
 sleep 2
 sudo apt install docker.io -y
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+docker run hello-world
 
 echo -e $ORANGE"\n\t\t\t\t Installing reconFTW"$RESETBG
 sleep 2
