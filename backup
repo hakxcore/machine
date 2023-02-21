@@ -113,7 +113,6 @@ echo -e $ORANGE"\n\t\t\t\t Installing Docker"$RESETBG
 sleep 2
 sudo apt install docker.io -y
 
-echo -e  $ORANGE"\t\t\t\t Installing Reconftw"$RESETBG
 echo -e $ORANGE"\n\t\t\t\t Installing reconFTW"$RESETBG
 sleep 2
 git clone https://github.com/six2dez/reconftw
